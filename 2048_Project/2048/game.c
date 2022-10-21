@@ -111,7 +111,7 @@ void right(int game_board[4][4])
     
     for (int i=0;i<4;i++)
         for (int j=3;j>=1;j--)
-            if (game_board[i][j]==game_board[i][j-1] && game_board[i][j] != 0 && game_board[i][j] != 2048)
+            if (game_board[i][j]==game_board[i][j-1] && game_board[i][j] != 0)
                 combine(game_board[i][j-1],game_board[i][j]);
     
     for (int i=0;i<4;i++)
@@ -150,7 +150,7 @@ void left(int game_board[4][4])
     
     for (int i=0;i<4;i++)
         for (int j=0;j<3;j++)
-            if (game_board[i][j]==game_board[i][j+1] && game_board[i][j] != 0 && game_board[i][j] != 2048)
+            if (game_board[i][j]==game_board[i][j+1] && game_board[i][j] != 0)
                 combine(game_board[i][j+1],game_board[i][j]);
     
     for (int i=0;i<4;i++)
@@ -189,7 +189,7 @@ void up(int game_board[4][4])
     
     for (int j=0;j<4;j++)
         for (int i=0;i<3;i++)
-            if (game_board[i][j]==game_board[i+1][j] && game_board[i][j] != 0 && game_board[i][j] != 2048)
+            if (game_board[i][j]==game_board[i+1][j] && game_board[i][j] != 0)
                 combine(game_board[i+1][j],game_board[i][j]);
     
     for (int j=0;j<4;j++)
@@ -227,7 +227,7 @@ void down(int game_board[4][4])
     
     for (int j=0;j<4;j++)
         for (int i=3;i>=1;i--)
-            if (game_board[i][j]==game_board[i-1][j] && game_board[i][j] != 0 && game_board[i][j] != 2048)
+            if (game_board[i][j]==game_board[i-1][j] && game_board[i][j] != 0)
                 combine(game_board[i-1][j],game_board[i][j]);
     
     for (int j=0;j<4;j++)
